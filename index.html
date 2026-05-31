@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+<title>婚禮香氛吧報價單 — 星期六生活有限公司</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+@font-face { font-family: 'ChironGoRound'; src: local('Chiron GoRound TC'), local('ChironGoRoundTC'); }
+@font-face { font-family: 'ChironSung'; src: local('Chiron Sung HK'), local('ChironSungHK'); }
+@font-face { font-family: 'Optima'; src: local('Optima'), local('Optima Regular'); }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── 品牌規範色彩 v2 ── */
+  --brown:    #7f5b43;
+  --linen:    #f2ece0;
+  --blush:    #c79483;
+  --mauve:    #a5908b;
+  --olive:    #88794e;
+  --pinkgrey: #e2d8cf;
+  --gold:     #d6b777;
+  --offwhite: #f4f3ef;
+
+  /* ── 功能色 ── */
+  --text:     #2a1f18;
+  --muted:    #9a8878;
+  --rule:     #ddd5cc;
+  --dark-blk: #77665b;
+  --accent:   #7f5b43;
+  --alert:    #c04020;
+  --orange:   #c07020;
+
+  /* ── 別名（向後相容） ── */
+  --copper:    var(--brown);
+  --gold-light: #d6b777;
+  --gold-dark:  #88794e;
+  --border:    var(--rule);
+  --red:       var(--alert);
+
+  /* ── 字體 ── */
+  --font-en:   'Optima','Optima Regular','Gill Sans','Trebuchet MS',sans-serif;
+  --font:      'Chiron GoRound TC','ChironGoRound','Noto Sans TC',sans-serif;
+  --font-serif:'Cormorant Garamond','Chiron Sung HK','ChironSung','Noto Serif TC',serif;
+}
+
+html, body { height: 100%; font-family: var(--font); color: var(--text); background: var(--linen); font-weight: 300; }
+
+/* ── TOPBAR ── */
+#topbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 50px; z-index: 200;
+  background: #FFFEF2; color: var(--text);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 24px;
+}
+#topbar h1 {
+  font-family: var(--font-en); font-size: 0.68rem; font-weight: 400;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+}
+.top-btns { display: flex; gap: 8px; }
+.btn-reset {
+  padding: 5px 14px; border-radius: 0; border: 1px solid var(--rule);
+  background: transparent; color: var(--muted); font-family: var(--font-en);
+  font-size: 0.7rem; font-weight: 400; letter-spacing: 0.08em; cursor: pointer; transition: all 0.15s;
+}
+.btn-reset:hover { background: var(--offwhite); border-color: var(--mauve); }
+.btn-print {
+  padding: 5px 18px; border-radius: 0; border: 1px solid var(--brown);
+  background: var(--brown); color: white; font-family: var(--font-en);
+  font-size: 0.7rem; font-weight: 400; letter-spacing: 0.1em; cursor: pointer; transition: all 0.15s;
+}
+.btn-print:hover { background: var(--olive); border-color: var(--olive); }
+
+/* ── SIDEBAR ── */
+#sidebar {
+  position: fixed; top: 50px; left: 0; bottom: 0; width: 400px;
+  background: var(--offwhite); border-right: 1px solid var(--rule);
+  overflow-y: auto; padding: 16px 14px 60px;
+}
+
+/* ── PREVIEW ── */
+#preview {
+  margin-left: 400px; min-height: 100vh;
+  padding: 66px 28px 48px;
+  display: flex; justify-content: center; align-items: flex-start;
+  background: #F7ECDD;
+}
+
+/* ── FORM ── */
+.sec {
+  background: white; border: 1px solid var(--rule);
+  border-radius: 0; overflow: hidden; margin-bottom: 8px;
+}
+.sec-h {
+  background: var(--dark-blk); color: #c8b8a8;
+  padding: 6px 12px; font-size: 0.62rem; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase;
+}
+.sec-b { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.field label {
+  display: block; font-size: 0.6rem; color: var(--muted); margin-bottom: 3px;
+  font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.field input, .field select, .field textarea {
+  width: 100%; padding: 6px 9px; border: 1px solid var(--rule); border-radius: 0;
+  background: var(--offwhite); font-family: var(--font); font-size: 0.8rem;
+  color: var(--text); outline: none; transition: border 0.15s; font-weight: 300;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--brown); background: white;
+}
+.field textarea { resize: vertical; min-height: 50px; }
+.field input[readonly] { background: var(--linen); color: var(--olive); font-weight: 500; cursor: default; }
+
+/* Brand box in sidebar */
+.brand-box {
+  background: #FFFEF2; padding: 10px 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand-box .brand-left .en {
+  font-family: var(--font-en); font-size: 0.8rem; font-weight: 400;
+  color: var(--text); letter-spacing: 0.08em;
+}
+.brand-box .brand-left .ch { font-size: 0.68rem; color: var(--muted); margin-top: 1px; letter-spacing: 0.04em; }
+.brand-box .tax { font-size: 0.6rem; color: var(--muted); font-family: monospace; }
+
+.check-row {
+  display: flex; align-items: center; gap: 7px; font-size: 0.8rem;
+  color: var(--text); cursor: pointer; font-weight: 300;
+}
+.check-row input[type=checkbox] { width: 14px; height: 14px; accent-color: var(--brown); cursor: pointer; flex-shrink: 0; }
+
+/* Plan cards */
+.plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.plan-card {
+  border: 1px solid var(--rule); border-radius: 0; padding: 8px 10px;
+  cursor: pointer; transition: all 0.15s; background: var(--offwhite); text-align: center;
+}
+.plan-card:hover { border-color: var(--brown); background: white; }
+.plan-card.selected { border-color: var(--brown); border-width: 2px; background: var(--linen); }
+.plan-card .pname { font-size: 0.76rem; font-weight: 500; color: var(--text); }
+.plan-card .pqty { font-size: 0.68rem; color: var(--muted); margin-top: 2px; font-weight: 300; }
+.plan-card.custom-card { border-style: dashed; }
+.plan-card.custom-card.selected { border-style: solid; }
+
+/* Price summary */
+.price-summary {
+  background: var(--linen); border: 1px solid var(--rule);
+  border-radius: 0; padding: 10px 12px;
+}
+.prow { display: flex; justify-content: space-between; font-size: 0.79rem; color: var(--muted); padding: 2px 0; }
+.prow b { color: var(--text); font-weight: 500; }
+.prow.grand {
+  border-top: 1px solid var(--rule); margin-top: 6px;
+  padding-top: 7px; font-weight: 500; font-size: 0.9rem; color: var(--text);
+}
+.prow.grand b { color: var(--olive); font-size: 0.95rem; }
+
+.hint { font-size: 0.67rem; color: var(--muted); font-style: italic; font-weight: 300; }
+.divider { border-top: 1px dashed var(--rule); padding-top: 8px; margin-top: 2px; }
+
+/* ── PAPER ── */
+.paper {
+  background: white; width: 100%; max-width: 800px;
+  border-radius: 0; box-shadow: 0 2px 32px rgba(44,32,22,0.18);
+  font-size: 0.83rem; font-family: var(--font); font-weight: 300;
+}
+
+/* Top stripe — 品牌規範 §06：深棕→銅金→深棕 */
+.paper-stripe { display: none; }
+
+.paper-inner { padding: 36px 46px; }
+
+/* Header — LOGO左，訂單右 */
+.paper-top {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 20px; align-items: start; margin-bottom: 10px;
+}
+.paper-brand {}
+.paper-brand img {
+  height: 28px; display: block; margin-bottom: 4px; opacity: 0.85;
+}
+.paper-brand .brand-sub {
+  font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em;
+}
+.paper-brand .ch-name {
+  font-size: 0.7rem; color: var(--muted); margin-top: 1px; letter-spacing: 0.04em;
+}
+
+.paper-order {
+  text-align: right; font-size: 0.7rem; color: var(--muted);
+  line-height: 1.9; padding-left: 24px; border-left: 1px solid var(--rule);
+}
+.paper-order strong { color: var(--text); font-weight: 500; }
+
+/* Title block — Chiron Sung HK, §04 規範 */
+.paper-title-wrap {
+  text-align: center; padding: 20px 0 16px;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  margin-bottom: 18px;
+}
+.ptitle-en {
+  font-family: var(--font-en); font-size: 0.62rem; color: var(--brown);
+  letter-spacing: 0.28em; margin-bottom: 6px; font-weight: 400; text-transform: uppercase;
+}
+.ptitle-main {
+  font-family: var(--font-serif); font-size: 1.7rem; font-weight: 400;
+  color: var(--text); letter-spacing: 0.18em; line-height: 1.3;
+}
+.ptitle-sub {
+  font-size: 0.65rem; color: var(--muted); margin-top: 6px;
+  letter-spacing: 0.14em; text-transform: uppercase; font-weight: 400;
+}
+
+/* Info table */
+.info-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 0.76rem; }
+.info-table td { padding: 5px 9px; border: 1px solid var(--rule); vertical-align: top; }
+.info-table .lbl {
+  background: var(--offwhite); color: var(--muted); font-weight: 500;
+  white-space: nowrap; width: 80px; font-size: 0.64rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.info-table .lbl2 {
+  background: var(--offwhite); color: var(--muted); font-weight: 500;
+  white-space: nowrap; width: 72px; border-left: 1px solid var(--rule);
+  font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.info-table .val { color: var(--text); font-weight: 300; }
+
+/* Pending schedule box */
+.pending-box {
+  background: var(--offwhite); border: 1px solid var(--rule);
+  border-left: 3px solid var(--alert); padding: 8px 12px; margin-bottom: 14px;
+}
+.pending-title {
+  font-size: 0.62rem; font-weight: 500; color: var(--alert);
+  margin-bottom: 4px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.pending-list { font-size: 0.74rem; color: var(--muted); line-height: 2; font-weight: 300; }
+
+/* Section titles — ✦ centered */
+.paper-sec-title {
+  font-size: 0.68rem; font-weight: 400; letter-spacing: 0.18em;
+  color: var(--brown); text-transform: uppercase;
+  font-family: var(--font-en);
+  border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.paper-sec-title::before, .paper-sec-title::after { content: '✦'; font-size: 0.52rem; }
+.paper-section { margin-bottom: 16px; }
+
+/* Quote table */
+.qt { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 0.78rem; }
+.qt thead tr { background: var(--dark-blk); color: #c8b8a8; }
+.qt thead th {
+  padding: 8px 10px; text-align: left; font-weight: 400;
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.qt thead th.r { text-align: right; }
+.qt thead th.c { text-align: center; }
+.qt tbody tr { border-bottom: 1px solid var(--rule); }
+.qt tbody tr:nth-child(even) { background: var(--offwhite); }
+.qt tbody td { padding: 8px 10px; vertical-align: top; font-weight: 300; }
+.qt tbody td.r { text-align: right; }
+.qt tbody td.c { text-align: center; }
+.qt tbody td.ac { color: var(--olive); font-weight: 500; text-align: right; }
+.disc-badge {
+  display: inline-block;
+  background: var(--orange); color: white;
+  font-size: 0.62rem; padding: 1px 8px; border-radius: 0;
+  font-weight: 500; margin-left: 6px; letter-spacing: 0.04em;
+}
+
+/* Totals */
+.totals-wrap { display: flex; justify-content: flex-end; margin-bottom: 14px; }
+.totals-box { width: 240px; }
+.trow {
+  display: flex; justify-content: space-between; padding: 5px 0;
+  font-size: 0.77rem; color: var(--muted); border-bottom: 1px solid var(--rule);
+  font-weight: 300;
+}
+.trow:last-child { border-bottom: none; }
+.trow span:last-child { font-weight: 500; color: var(--text); }
+.trow.grand {
+  border-top: 1px solid var(--text); border-bottom: none;
+  margin-top: 4px; padding-top: 8px; color: var(--text);
+  font-weight: 500; font-size: 0.92rem;
+}
+.trow.grand span:last-child { color: var(--brown); font-weight: 600; }
+
+/* Services box */
+.services-box { border: 1px solid var(--rule); overflow: hidden; margin-bottom: 14px; }
+.services-cols { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); }
+.services-col { border-right: 1px solid var(--rule); }
+.services-col:last-child { border-right: none; }
+.svc-head {
+  background: var(--offwhite); padding: 5px 12px;
+  font-size: 0.62rem; font-weight: 400; color: var(--brown);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  font-family: var(--font-en);
+  border-bottom: 1px solid var(--rule);
+}
+.svc-body { padding: 9px 12px; font-size: 0.73rem; color: var(--muted); line-height: 2.1; font-weight: 300; }
+.svc-body li { margin-left: 14px; }
+.svc-body p { margin-bottom: 3px; }
+.svc-red { color: var(--alert); font-weight: 400; }
+
+/* Custom items */
+.custom-box { border: 1px solid var(--rule); overflow: hidden; margin-bottom: 14px; }
+.custom-inner { padding: 10px 12px; font-size: 0.76rem; }
+.custom-row {
+  display: flex; gap: 8px; padding: 5px 0;
+  border-bottom: 1px solid var(--rule); align-items: flex-start;
+}
+.custom-row:last-child { border-bottom: none; }
+.custom-k {
+  color: var(--muted); font-weight: 500; min-width: 68px; flex-shrink: 0;
+  font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; padding-top: 2px;
+}
+.custom-v { color: var(--text); font-weight: 300; }
+
+/* Payment boxes */
+.pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.pay-box { border: 1px solid var(--rule); padding: 9px 12px; font-size: 0.74rem; font-weight: 300; }
+.pay-box.active { border-color: var(--brown); border-left-width: 3px; background: var(--offwhite); }
+.pay-box-title { font-weight: 500; color: var(--text); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; font-size: 0.76rem; }
+.pay-check {
+  width: 13px; height: 13px; border: 1px solid var(--rule);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.58rem; flex-shrink: 0;
+}
+.pay-check.on { background: var(--brown); border-color: var(--brown); color: white; }
+.pay-desc { color: var(--muted); line-height: 1.8; }
+
+/* Remarks + bank */
+.remarks-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--rule);
+  background: var(--offwhite); color: var(--text);
+}
+.remark-cell { padding: 10px 14px; }
+.remark-cell:first-child { border-right: 1px solid var(--rule); }
+.remark-label {
+  font-weight: 500; color: var(--muted); font-size: 0.58rem;
+  letter-spacing: 0.16em; margin-bottom: 6px; text-transform: uppercase;
+  display: block;
+}
+.bank-info { font-size: 0.73rem; color: var(--text); line-height: 2; }
+.bank-row { display: flex; gap: 6px; }
+.bank-k { color: var(--muted); min-width: 32px; }
+.bank-v { font-family: monospace; letter-spacing: 0.02em; }
+
+/* Notes box */
+.notes-box {
+  border: 1px solid var(--rule); border-top: none;
+  padding: 10px 14px; margin-bottom: 14px;
+  background: var(--offwhite);
+}
+.notes-text { font-size: 0.7rem; color: var(--muted); line-height: 2.2; font-weight: 300; }
+.notes-text .red { color: var(--alert); }
+.notes-text .orange { color: var(--orange); }
+
+/* Sign area */
+.sign-area {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--rule); margin-bottom: 0;
+}
+.sign-block { padding: 12px 16px 16px; }
+.sign-block:first-child { border-right: 1px solid var(--rule); }
+.sign-label-t {
+  font-size: 0.6rem; color: var(--muted); font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 2px;
+}
+.sign-line { border-bottom: 1px solid var(--rule); margin: 32px 16px 6px; }
+.sign-person { font-size: 0.76rem; color: var(--text); text-align: right; font-weight: 400; }
+
+/* Footer — dark ground, §07 Fixed Copy */
+.paper-footer {
+  background: #FFFEF2; color: var(--muted);
+  font-size: 0.6rem; text-align: center;
+  padding: 8px 16px; letter-spacing: 0.1em; text-transform: uppercase;
+  border-top: 1px solid var(--rule);
+}
+
+@media print {
+  #topbar, #sidebar, #loginScreen { display: none !important; }
+  #appBody { display: block !important; height: auto !important; }
+  #preview { margin: 0 !important; padding: 0 !important; background: white !important; }
+  .paper { box-shadow: none !important; max-width: 100% !important; border-radius: 0 !important; }
+  .paper-inner { padding: 24px 40px; }
+  .page-break-before { page-break-before: always; break-before: page; }
+  .services-box, .custom-box, .pay-grid, .remarks-grid, .notes-box, .sign-area { page-break-inside: avoid; break-inside: avoid; }
+}
+
+/* ── Firebase 按鈕 ── */
+.btn-save {
+  padding: 6px 16px; border-radius: 4px; border: none;
+  background: var(--brown); color: white;
+  font-family: var(--font); font-size: 0.78rem; font-weight: 600; cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-save:hover { background: var(--olive); }
+.btn-history {
+  padding: 6px 16px; border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent; color: #d4c4a8;
+  font-family: var(--font); font-size: 0.78rem; cursor: pointer;
+}
+.btn-history:hover { background: rgba(255,255,255,0.1); }
+
+/* ── 歷史紀錄 Modal ── */
+#historyModal {
+  display: none;
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.55);
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.hist-inner {
+  background: var(--offwhite);
+  border-radius: 8px;
+  width: 100%; max-width: 600px;
+  max-height: 80vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+.hist-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--dark-blk);
+  color: #f0e0d0;
+  font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em;
+}
+.hist-close {
+  background: none; border: none; color: #c0a890;
+  font-size: 1.2rem; cursor: pointer; line-height: 1;
+}
+#historyList { overflow-y: auto; padding: 12px 16px; flex: 1; }
+.hist-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: white;
+}
+.hist-meta { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.hist-no { font-size: 0.72rem; font-weight: 600; color: var(--brown); font-family: monospace; }
+.hist-date { font-size: 0.7rem; color: var(--muted); }
+.hist-client { font-size: 0.85rem; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+.hist-detail { font-size: 0.75rem; color: var(--muted); margin-bottom: 10px; }
+.hist-load-btn {
+  padding: 5px 14px; border-radius: 4px; border: 1px solid var(--brown);
+  background: transparent; color: var(--brown);
+  font-family: var(--font); font-size: 0.75rem; cursor: pointer;
+  transition: all 0.15s;
+}
+.hist-load-btn:hover { background: var(--brown); color: white; }
+.hist-del-btn {
+  padding: 5px 14px; border-radius: 4px; border: 1px solid #e0b0a0;
+  background: transparent; color: #c07060;
+  font-family: var(--font); font-size: 0.75rem; cursor: pointer; transition: all 0.15s;
+}
+.hist-del-btn:hover { background: #fde8e0; border-color: #c07060; }
+</style>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCW6souxwc3CroJf4VjnVV8bmg5p_bl-Bw",
+    authDomain: "its-saturday-wedding.firebaseapp.com",
+    projectId: "its-saturday-wedding",
+    storageBucket: "its-saturday-wedding.firebasestorage.app",
+    messagingSenderId: "588658122712",
+    appId: "1:588658122712:web:b9ebaa07f9052fba029cad"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+
+  // ── 允許的員工帳號 ──────────────────────────────────────────
+  const ALLOWED_EMAILS = [
+    "chungabb4@gmail.com",
+    "johnny81842@gmail.com",
+    "its.saturday.2021@gmail.com",
+    "itssaturday001@gmail.com"
+  ];
+
+  // ── 登入狀態監聽 ─────────────────────────────────────────────
+  auth.onAuthStateChanged(function(user) {
+    if (user && ALLOWED_EMAILS.includes(user.email)) {
+      document.getElementById("loginScreen").style.display = "none";
+      document.getElementById("appBody").style.display = "block";
+      document.getElementById("userEmail").textContent = user.email;
+    } else if (user) {
+      auth.signOut();
+      alert("此帳號無使用權限，請聯絡管理員。");
+    } else {
+      document.getElementById("loginScreen").style.display = "flex";
+      document.getElementById("appBody").style.display = "none";
+    }
+  });
+
+  // ── Google 登入 ───────────────────────────────────────────────
+  window.signInWithGoogle = function() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider).catch(function(e) {
+      alert("登入失敗：" + e.message);
+    });
+  };
+
+  // ── 登出 ─────────────────────────────────────────────────────
+  window.signOut = function() {
+    if (confirm("確定要登出嗎？")) auth.signOut();
+  };
+
+  // ── 存報價單 ──────────────────────────────────────────────────
+  window.saveQuote = async function() {
+    const btn = document.getElementById("btnSave");
+    btn.textContent = "儲存中…";
+    btn.disabled = true;
+    try {
+      const data = collectFormData();
+      data.savedBy = auth.currentUser ? auth.currentUser.email : "";
+      await db.collection("quotes").add({
+        ...data,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      btn.textContent = "✓ 已儲存";
+      btn.style.background = "#5a8a5a";
+      setTimeout(function() {
+        btn.textContent = "💾 儲存報價單";
+        btn.style.background = "";
+        btn.disabled = false;
+      }, 2500);
+    } catch (e) {
+      console.error(e);
+      alert("儲存失敗，請確認網路連線後再試。");
+      btn.textContent = "💾 儲存報價單";
+      btn.disabled = false;
+    }
+  };
+
+  // ── 讀取歷史紀錄 ──────────────────────────────────────────────
+  window.loadHistory = async function() {
+    const modal = document.getElementById("historyModal");
+    const list  = document.getElementById("historyList");
+    modal.style.display = "flex";
+    list.innerHTML = "<div style='color:#9a8878;padding:20px;text-align:center'>載入中…</div>";
+    try {
+      const snap = await db.collection("quotes").orderBy("createdAt", "desc").get();
+      if (snap.empty) {
+        list.innerHTML = "<div style='color:#9a8878;padding:20px;text-align:center'>尚無歷史報價單</div>";
+        return;
+      }
+      list.innerHTML = "";
+      snap.forEach(function(docSnap) {
+        const d = docSnap.data();
+        const date = d.createdAt && d.createdAt.toDate
+          ? d.createdAt.toDate().toLocaleDateString("zh-TW")
+          : "—";
+        const card = document.createElement("div");
+        card.className = "hist-card";
+        card.setAttribute("data-docid", docSnap.id);
+        const safeJson = JSON.stringify(d).replace(/'/g, "&#39;");
+        card.innerHTML =
+          "<div class='hist-meta'>" +
+            "<span class='hist-no'>" + (d.orderNo || "—") + "</span>" +
+            "<span class='hist-date'>" + date + "</span>" +
+          "</div>" +
+          "<div class='hist-client'>" + (d.clientNameCH || "未填姓名") + (d.clientNameLINE ? " · " + d.clientNameLINE : "") + "</div>" +
+          "<div class='hist-detail'>" +
+            (d.weddingDate ? d.weddingDate.replace(/-/g, "/") : "—") + " · " +
+            (d.plan || "—") + " · NT$ " + Number(d.total || 0).toLocaleString("zh-TW") +
+          "</div>" +
+          "<div style='font-size:0.68rem;color:#b0a090;margin-bottom:10px'>儲存者：" + (d.savedBy || "—") + "</div>" +
+          "<div style='display:flex;gap:8px;'>" +
+            "<button class='hist-load-btn' onclick='loadQuote(this)' data-json='" + safeJson + "'>載入此報價單</button>" +
+            "<button class='hist-del-btn' onclick=\"deleteQuote('" + docSnap.id + "',this)\">刪除</button>" +
+          "</div>";
+        list.appendChild(card);
+      });
+    } catch (e) {
+      console.error(e);
+      list.innerHTML = "<div style='color:#c04020;padding:20px;text-align:center'>讀取失敗，請稍後再試。</div>";
+    }
+  };
+
+  // ── 刪除報價單 ──────────────────────────────────────────────────────────────
+  window.deleteQuote = async function(docId, btn) {
+    if (!confirm("確定要刪除這筆報價單嗎？此動作無法復原。")) return;
+    btn.textContent = "刪除中…";
+    btn.disabled = true;
+    try {
+      await db.collection("quotes").doc(docId).delete();
+      const card = document.querySelector("[data-docid='" + docId + "']");
+      if (card) {
+        card.style.opacity = "0";
+        card.style.transform = "translateX(20px)";
+        card.style.transition = "all 0.3s ease";
+        setTimeout(function() { card.remove(); }, 300);
+      }
+      const list = document.getElementById("historyList");
+      if (list && !list.querySelector(".hist-card")) {
+        list.innerHTML = "<div style='color:#9a8878;padding:20px;text-align:center'>尚無歷史報價單</div>";
+      }
+    } catch (e) {
+      console.error(e);
+      alert("刪除失敗，請稍後再試。");
+      btn.textContent = "刪除";
+      btn.disabled = false;
+    }
+  };
+
+// ── 收集表單資料 ──────────────────────────────────────────────────────────────
+function collectFormData() {
+  const N = getNumbers();
+  return {
+    orderNo:        v('orderNo'),
+    qDate:          v('qDate'),
+    projectName:    v('projectName'),
+    salesName:      v('salesName'),
+    clientNameCH:   v('clientNameCH'),
+    clientNameLINE: v('clientNameLINE'),
+    clientPhone:    v('clientPhone'),
+    weddingDate:    v('weddingDate'),
+    weddingType:    v('weddingType'),
+    guestCount:     v('guestCount'),
+    hours:          v('hours'),
+    venue:          v('venue'),
+    venueCity:      v('venueCity'),
+    hallName:       v('hallName'),
+    plan:           selectedPlan ? selectedPlan.name : '',
+    planQty:        getDisplayQty(),
+    planPrice:      Number(v('planPrice'))||0,
+    extraQty:       Number(v('extraQty'))||0,
+    extraPrice:     Number(v('extraPrice'))||0,
+    transport:      Number(v('transport'))||0,
+    otherDesc:      v('otherDesc'),
+    otherAmt:       Number(v('otherAmt'))||0,
+    discountPct:    cb('discEnable') && cb('useRate') ? Number(v('discRate'))||0 : 0,
+    discountFixed:  cb('discEnable') && cb('useFixed') ? Number(v('discFixed'))||0 : 0,
+    scentStatus:    v('scentStatus'),
+    scentText:      v('scentText'),
+    bottleShape:    v('bottleShape'),
+    capColor:       v('capColor'),
+    ckSticker:      cb('ckSticker'),
+    ckBackdrop:     cb('ckBackdrop'),
+    payFull:        cb('payFull'),
+    payDeposit:     cb('payDeposit'),
+    depositAmt:     v('depositAmt'),
+    balanceAmt:     v('balanceAmt'),
+    extraNote:      v('extraNote'),
+    subtotal:       N.subtotal,
+    total:          N.total,
+  };
+}
+
+// ── 載入歷史報價單回表單 ──────────────────────────────────────────────────────
+function loadQuote(btn) {
+  if (!confirm('載入此報價單將覆蓋目前填寫的內容，確定嗎？')) return;
+  const d = JSON.parse(btn.getAttribute('data-json'));
+  document.getElementById('historyModal').style.display = 'none';
+
+  const setV = (id, val) => { const e=document.getElementById(id); if(e && val!==undefined) e.value=val; };
+  const setCb = (id, val) => { const e=document.getElementById(id); if(e) e.checked=!!val; };
+
+  setV('orderNo', d.orderNo); setV('qDate', d.qDate);
+  setV('projectName', d.projectName); setV('salesName', d.salesName);
+  setV('clientNameCH', d.clientNameCH); setV('clientNameLINE', d.clientNameLINE);
+  setV('clientPhone', d.clientPhone);
+  setV('weddingDate', d.weddingDate); setV('weddingType', d.weddingType);
+  setV('guestCount', d.guestCount); setV('hours', d.hours);
+  setV('venue', d.venue); setV('venueCity', d.venueCity); setV('hallName', d.hallName);
+  setV('planPrice', d.planPrice); setV('extraQty', d.extraQty);
+  setV('extraPrice', d.extraPrice); setV('transport', d.transport);
+  setV('otherDesc', d.otherDesc); setV('otherAmt', d.otherAmt);
+  setV('discRate', d.discountPct); setV('discFixed', d.discountFixed);
+  setV('scentStatus', d.scentStatus); setV('scentText', d.scentText);
+  setV('bottleShape', d.bottleShape); setV('capColor', d.capColor);
+  setV('depositAmt', d.depositAmt); setV('balanceAmt', d.balanceAmt);
+  setV('extraNote', d.extraNote);
+
+  setCb('discEnable', d.discountPct > 0 || d.discountFixed > 0);
+  setCb('useRate', d.discountPct > 0);
+  setCb('useFixed', d.discountFixed > 0);
+  setCb('ckSticker', d.ckSticker);
+  setCb('ckBackdrop', d.ckBackdrop);
+  setCb('payFull', d.payFull);
+  setCb('payDeposit', d.payDeposit);
+
+  // Restore plan selection
+  if (d.plan) {
+    document.querySelectorAll('.plan-card').forEach(card => {
+      if (card.querySelector('.pname')?.textContent === d.plan) {
+        card.classList.add('selected');
+        selectedPlan = { name: d.plan, qty: d.planQty };
+        const displayQty = document.getElementById('displayQty');
+        if (displayQty) displayQty.value = d.planQty ? d.planQty + ' 份' : '';
+      }
+    });
+  }
+
+  toggleScent();
+  render();
+}
+
+</script>
+</head>
+<body>
+
+
+<!-- 登入畫面 -->
+<div id="loginScreen" style="display:flex;position:fixed;inset:0;background:#f4f3ef;z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:20px;">
+  <div style="text-align:center;margin-bottom:8px;">
+    <div style="font-family:'Optima','Gill Sans',sans-serif;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:#9a8878;margin-bottom:8px;">It's Saturday!</div>
+    <div style="font-family:'Noto Serif TC',serif;font-size:1.2rem;color:#2a1f18;margin-bottom:4px;">星期六生活有限公司</div>
+    <div style="font-size:0.75rem;color:#9a8878;">婚禮香氛吧報價單系統</div>
+  </div>
+  <div style="width:1px;height:40px;background:linear-gradient(180deg,transparent,#ddd5cc,transparent);"></div>
+  <button onclick="signInWithGoogle()" style="display:flex;align-items:center;gap:10px;padding:12px 28px;border:1px solid #ddd5cc;background:white;border-radius:0;cursor:pointer;font-family:'Noto Sans TC',sans-serif;font-size:0.85rem;color:#2a1f18;transition:all 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+    <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z"/><path fill="#34A853" d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z"/><path fill="#FBBC05" d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z"/><path fill="#EA4335" d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z"/></svg>
+    使用 Google 帳號登入
+  </button>
+  <div style="font-size:0.7rem;color:#b0a090;letter-spacing:0.06em;">僅限授權員工使用</div>
+</div>
+
+<!-- 主應用 -->
+<div id="appBody" style="display:none;height:100%;">
+
+<div id="topbar">
+  <h1>✦ 婚禮香氛吧報價單</h1>
+  <div class="top-btns">
+    <span id="userEmail" style="font-size:0.68rem;color:#9a8878;letter-spacing:0.04em;margin-right:4px;"></span>
+    <button class="btn-reset" onclick="signOut()">登出</button>
+    <button class="btn-reset" onclick="resetAll()">重置</button>
+    <button class="btn-history" onclick="loadHistory()">📋 歷史紀錄</button>
+    <button id="btnSave" class="btn-save" onclick="saveQuote()">💾 儲存報價單</button>
+    <button class="btn-print" onclick="printPDF()">列印 / 儲存 PDF</button>
+  </div>
+</div>
+
+<div id="sidebar">
+
+  <div style="margin-bottom:10px">
+    <div class="brand-box">
+      <div class="brand-left">
+        <div class="en">It's Saturday!</div>
+        <div class="ch">星期六生活有限公司</div>
+      </div>
+      <div class="tax">統編 91109556</div>
+    </div>
+  </div>
+
+  <!-- 訂單 & 業務 -->
+  <div class="sec">
+    <div class="sec-h">訂單 & 業務資訊</div>
+    <div class="sec-b">
+      <div class="r2">
+        <div class="field"><label>訂單編號</label><input id="orderNo" oninput="render()"></div>
+        <div class="field"><label>報價日期</label><input id="qDate" type="date" oninput="render()"></div>
+      </div>
+      <div class="r2">
+        <div class="field"><label>專案名稱</label><input id="projectName" value="婚禮調香活動" oninput="render()"></div>
+        <div class="field"><label>負責業務姓名</label><input id="salesName" placeholder="鍾知恩" oninput="render()"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 客戶資訊 -->
+  <div class="sec">
+    <div class="sec-h">客戶資訊</div>
+    <div class="sec-b">
+      <div class="r2">
+        <div class="field"><label>客戶中文全名</label><input id="clientNameCH" placeholder="王小明" oninput="render()"></div>
+        <div class="field"><label>LINE 名稱</label><input id="clientNameLINE" oninput="render()"></div>
+      </div>
+      <div class="field"><label>聯絡電話</label><input id="clientPhone" placeholder="0933-946-797" oninput="render()"></div>
+    </div>
+  </div>
+
+  <!-- 婚禮資訊 -->
+  <div class="sec">
+    <div class="sec-h">婚禮資訊</div>
+    <div class="sec-b">
+      <div class="r2">
+        <div class="field"><label>婚期</label><input id="weddingDate" type="date" oninput="render()"></div>
+        <div class="field"><label>時段</label>
+          <select id="weddingType" onchange="autoFillSchedule(); render()">
+            <option value="午宴">午宴</option>
+            <option value="晚宴" selected>晚宴</option>
+          </select>
+        </div>
+      </div>
+      <div class="r2">
+        <div class="field"><label>預計人數</label><input id="guestCount" placeholder="___" oninput="render()"></div>
+        <div class="field"><label>活動時長（hrs）</label><input id="hours" type="number" value="4" min="1" oninput="render()"></div>
+      </div>
+      <div class="r2">
+        <div class="field"><label>地區</label><input id="venueCity" value="台北" oninput="render()"></div>
+        <div class="field"><label>地點（場館名稱）</label><input id="venue" placeholder="孫立人將軍官邸" oninput="render()"></div>
+      </div>
+      <div class="field"><label>廳別 / 新人姓名</label><input id="hallName" placeholder="廳別（新人姓名）" oninput="render()"></div>
+    </div>
+  </div>
+
+  <!-- 時程 -->
+  <div class="sec">
+    <div class="sec-h">時程安排（★ 待確認）</div>
+    <div class="sec-b">
+      <div class="hint">依婚宴時段自動帶入，如需調整請直接修改</div>
+      <div class="r2">
+        <div class="field"><label>進場時間</label><input id="t1" placeholder="自動帶入" oninput="render()"></div>
+        <div class="field"><label>開放使用時段</label><input id="t3" placeholder="自動帶入" oninput="render()"></div>
+      </div>
+      <div class="field"><label>備註（特殊時程說明）</label><input id="schedNote" placeholder="例：因場地配合，提前至 15:00 進場" oninput="render()"></div>
+    </div>
+  </div>
+
+  <!-- 報價品項 -->
+  <div class="sec">
+    <div class="sec-h">報價品項</div>
+    <div class="sec-b">
+      <div class="field"><label>選擇方案</label></div>
+      <div class="plan-grid" id="planGrid">
+        <div class="plan-card" onclick="selectPlan(this,'精緻互動方案',80,42000)">
+          <div class="pname">精緻互動方案</div><div class="pqty">80 份 ／ NT$ 42,000</div>
+        </div>
+        <div class="plan-card" onclick="selectPlan(this,'經典療癒方案',100,48000)">
+          <div class="pname">經典療癒方案</div><div class="pqty">100 份 ／ NT$ 48,000</div>
+        </div>
+        <div class="plan-card" onclick="selectPlan(this,'盛大感官方案',150,65000)">
+          <div class="pname">盛大感官方案</div><div class="pqty">150 份 ／ NT$ 65,000</div>
+        </div>
+        <div class="plan-card" onclick="selectPlan(this,'豪華方案',200,82000)">
+          <div class="pname">豪華方案</div><div class="pqty">200 份 ／ NT$ 82,000</div>
+        </div>
+        <div class="plan-card custom-card" style="grid-column:span 2" onclick="selectPlan(this,'客製化方案',null,null)">
+          <div class="pname">客製化方案</div><div class="pqty">業務自行填寫份數與金額</div>
+        </div>
+      </div>
+
+      <div id="customQtyField" style="display:none">
+        <div class="field"><label>客製化份數</label><input id="customQty" type="number" placeholder="填入份數" min="1" oninput="render()"></div>
+      </div>
+
+      <div class="r2">
+        <div class="field"><label>提供份數（自動帶入）</label><input id="displayQty" readonly placeholder="—"></div>
+        <div class="field"><label>方案費用（元，可手動調整）</label><input id="planPrice" type="number" placeholder="選方案後自動帶入" min="0" oninput="render()"></div>
+      </div>
+
+      <div class="divider">
+        <div class="r2">
+          <div class="field"><label>加購份數（選填）</label><input id="extraQty" type="number" placeholder="0" min="0" oninput="render()"></div>
+          <div class="field"><label>加購費用（元，選填）</label><input id="extraPrice" type="number" placeholder="0" min="0" oninput="render()"></div>
+        </div>
+      </div>
+
+      <div class="field"><label>交通費（元）</label><input id="transport" type="number" value="0" min="0" oninput="render()"></div>
+      <div class="r2">
+        <div class="field"><label>其他費用說明</label><input id="otherDesc" placeholder="例：額外支架費" oninput="render()"></div>
+        <div class="field"><label>其他費用（元）</label><input id="otherAmt" type="number" value="0" min="0" oninput="render()"></div>
+      </div>
+
+      <div style="border-top:1px dashed var(--rule);padding-top:10px;margin-top:4px">
+        <div style="font-size:0.6rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px">其他商品品項（可新增多項）</div>
+        <div class="item-header" style="display:grid;grid-template-columns:1fr 80px 24px;gap:5px;font-size:0.58rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;padding:3px 0">
+          <span>品項名稱 / 說明</span><span style="text-align:right">金額（元）</span><span></span>
+        </div>
+        <div id="extraItemRows"></div>
+        <button onclick="addExtraItem()" style="width:100%;padding:5px;border:1px dashed var(--rule);background:transparent;color:var(--muted);font-family:var(--font);font-size:0.75rem;cursor:pointer;transition:all 0.15s;letter-spacing:0.06em;margin-top:5px" onmouseover="this.style.borderColor='var(--brown)';this.style.color='var(--brown)'" onmouseout="this.style.borderColor='var(--rule)';this.style.color='var(--muted)'">＋ 新增商品品項</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 折扣 -->
+  <div class="sec">
+    <div class="sec-h">折扣設定</div>
+    <div class="sec-b">
+      <label class="check-row"><input type="checkbox" id="discEnable" onchange="render()"> 套用折扣</label>
+      <div id="discFields" style="display:none; flex-direction:column; gap:8px;">
+        <label class="check-row"><input type="checkbox" id="useRate" onchange="render()"> 折數優惠</label>
+        <div id="rateFields" style="display:none">
+          <div class="r2">
+            <div class="field"><label>折數（例：9 = 九折）</label><input id="discRate" type="number" min="1" max="9.9" step="0.1" placeholder="9" oninput="render()"></div>
+            <div class="field"><label>折扣說明</label><input id="discRateLabel" placeholder="諮詢後，全額付款 9 折" oninput="render()"></div>
+          </div>
+        </div>
+        <label class="check-row"><input type="checkbox" id="useFixed" onchange="render()"> 去尾數（固定金額）</label>
+        <div id="fixedFields" style="display:none">
+          <div class="r2">
+            <div class="field"><label>去尾數金額（元）</label><input id="discFixed" type="number" placeholder="0" min="0" oninput="render()"></div>
+            <div class="field"><label>說明</label><input id="discFixedLabel" placeholder="去尾數優惠" oninput="render()"></div>
+          </div>
+        </div>
+      </div>
+      <div class="price-summary" id="priceSummary"></div>
+    </div>
+  </div>
+
+  <!-- 客製化項目 -->
+  <div class="sec">
+    <div class="sec-h">客製化項目</div>
+    <div class="sec-b">
+      <div class="field"><label>香氣指定</label>
+        <select id="scentStatus" onchange="toggleScent(); render()">
+          <option value="pending">待確認（標紅色）</option>
+          <option value="custom">業務填寫香氣</option>
+        </select>
+      </div>
+      <div id="scentTextField" style="display:none">
+        <div class="field"><textarea id="scentText" rows="2" placeholder="例：晨霧森林、玫瑰琥珀、海鹽白茶、麝香香草" oninput="render()"></textarea></div>
+      </div>
+
+      <div class="r2">
+        <div class="field"><label>香氛噴霧瓶身</label>
+          <select id="bottleShape" onchange="render()">
+            <option value="pending">待確認</option>
+            <option value="方瓶">方瓶</option>
+            <option value="圓瓶">圓瓶</option>
+          </select>
+        </div>
+        <div class="field"><label>瓶蓋顏色</label>
+          <select id="capColor" onchange="render()">
+            <option value="pending">待確認</option>
+            <option value="深色蓋子">深色蓋子</option>
+            <option value="淺色蓋子">淺色蓋子</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>待確認項目期限</label>
+        <input id="pendingDeadline" type="date" oninput="render()">
+      </div>
+
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <label class="check-row"><input type="checkbox" id="ckSticker" onchange="render()"> 貼紙印刷</label>
+        <label class="check-row"><input type="checkbox" id="ckBackdrop" onchange="render()"> 背板印刷</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- 付款方式 -->
+  <div class="sec">
+    <div class="sec-h">付款方式</div>
+    <div class="sec-b">
+      <div class="hint">兩個選項均顯示於報價單，勾選者標示為業務推薦</div>
+      <label class="check-row"><input type="checkbox" id="payFull" onchange="render()"> 全額付款</label>
+      <label class="check-row"><input type="checkbox" id="payDeposit" onchange="render()"> 付訂金 50%、15天前付尾款</label>
+      <div id="depositFields" style="display:none; flex-direction:column; gap:8px;">
+        <div class="r2">
+          <div class="field"><label>訂金金額（元）</label><input id="depositAmt" placeholder="由業務填寫" oninput="render()"></div>
+          <div class="field"><label>尾款金額（元）</label><input id="balanceAmt" placeholder="由業務填寫" oninput="render()"></div>
+        </div>
+      </div>
+      <label class="check-row"><input type="checkbox" id="payOther" onchange="render()"> 其他付款方式</label>
+      <div id="payOtherFields" style="display:none; flex-direction:column; gap:8px;">
+        <div class="field"><label>說明（顯示於報價單）</label><textarea id="payOtherDesc" rows="2" placeholder="例：先付訂金 NT$ 10,000，確認總金額後補差額" oninput="render()" style="width:100%;padding:6px 9px;border:1px solid var(--rule);border-radius:0;background:var(--offwhite);font-family:var(--font);font-size:0.8rem;color:var(--text);outline:none;resize:vertical;font-weight:300"></textarea></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 備註 -->
+  <div class="sec">
+    <div class="sec-h">備註</div>
+    <div class="sec-b">
+      <div class="field"><textarea id="extraNote" rows="2" placeholder="需確認背板設計、貼紙設計…" oninput="render()"></textarea></div>
+    </div>
+  </div>
+
+</div><!-- /sidebar -->
+
+<div id="preview">
+  <div class="paper" id="paper"></div>
+</div>
+
+<script>
+const v = id => { const e=document.getElementById(id); return e?e.value.trim():''; };
+const cb = id => { const e=document.getElementById(id); return e?e.checked:false; };
+const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const fmt = n => Number(n||0).toLocaleString('zh-TW');
+const DAYS = ['日','一','二','三','四','五','六'];
+const fmtD = d => {
+  if (!d) return ' ___';
+  const [y,m,day] = d.split('-');
+  const dow = DAYS[new Date(d).getDay()];
+  return `${y}/${m}/${day}（${dow}）`;
+};
+const fmtDeadline = d => {
+  if (!d) return '';
+  const [y,m,day] = d.split('-');
+  const dow = DAYS[new Date(d).getDay()];
+  return `${y}/${m}/${day}（${dow}）`;
+};
+const show = (id, on) => { const e=document.getElementById(id); if(e) e.style.display=on?'flex':'none'; };
+
+let selectedPlan = null;
+
+function selectPlan(el, name, qty, price) {
+  document.querySelectorAll('.plan-card').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPlan = { name, qty };
+  const isCustom = qty === null;
+  document.getElementById('customQtyField').style.display = isCustom ? '' : 'none';
+  const displayQty = document.getElementById('displayQty');
+  const planPriceEl = document.getElementById('planPrice');
+  if (!isCustom) {
+    displayQty.value = qty + ' 份';
+    if (price !== null) planPriceEl.value = price;
+  } else {
+    displayQty.value = '';
+    planPriceEl.value = '';
+  }
+  render();
+}
+
+function getDisplayQty() {
+  if (!selectedPlan) return null;
+  if (selectedPlan.qty !== null) return selectedPlan.qty;
+  return Number(v('customQty')) || null;
+}
+
+function getNumbers() {
+  const planPrice = Number(v('planPrice')) || 0;
+  const extraPrice = Number(v('extraPrice')) || 0;
+  const transport = Number(v('transport')) || 0;
+  const other = Number(v('otherAmt')) || 0;
+  const extraItemsTotal = extraItems.reduce((sum, item) => sum + (Number(item.price)||0), 0);
+  const subtotal = planPrice + extraPrice + transport + other + extraItemsTotal;
+
+  let discRateAmt = 0, discFixedAmt = 0;
+  const discOn = cb('discEnable');
+  if (discOn) {
+    if (cb('useRate')) {
+      const rate = Math.min(9.9, Math.max(0, Number(v('discRate'))||0));
+      discRateAmt = rate > 0 ? Math.round(subtotal * (1 - rate/10)) : 0;
+    }
+    if (cb('useFixed')) { discFixedAmt = Math.max(0, Number(v('discFixed'))||0); }
+  }
+  const totalDisc = discRateAmt + discFixedAmt;
+  const total = Math.max(0, subtotal - totalDisc);
+  return { planPrice, extraPrice, transport, other, subtotal, discRateAmt, discFixedAmt, totalDisc, total, discOn };
+}
+
+function toggleScent() {
+  const isPending = v('scentStatus') === 'pending';
+  document.getElementById('scentTextField').style.display = isPending ? 'none' : '';
+}
+
+// ── 其他商品品項 ──
+let extraItems = [];
+let extraItemId = 0;
+
+function addExtraItem() {
+  const id = ++extraItemId;
+  extraItems.push({ id, name: '', price: '' });
+  renderExtraItemRows();
+  render();
+}
+
+function removeExtraItem(id) {
+  extraItems = extraItems.filter(i => i.id !== id);
+  renderExtraItemRows();
+  render();
+}
+
+function renderExtraItemRows() {
+  const container = document.getElementById('extraItemRows');
+  if (!container) return;
+  container.innerHTML = '';
+  extraItems.forEach(item => {
+    const row = document.createElement('div');
+    row.style.cssText = 'display:grid;grid-template-columns:1fr 80px 24px;gap:5px;align-items:center;margin-bottom:4px';
+    row.innerHTML = `
+      <input type="text" placeholder="品項名稱 / 說明" value="${esc(item.name)}"
+        oninput="updateExtraItem(${item.id},'name',this.value)"
+        style="padding:5px 7px;border:1px solid var(--rule);background:var(--offwhite);font-family:var(--font);font-size:0.78rem;color:var(--text);outline:none">
+      <input type="number" placeholder="金額" min="0" value="${item.price}"
+        oninput="updateExtraItem(${item.id},'price',this.value)"
+        style="padding:5px 7px;border:1px solid var(--rule);background:var(--offwhite);font-family:var(--font);font-size:0.78rem;color:var(--text);outline:none;text-align:right">
+      <button onclick="removeExtraItem(${item.id})"
+        style="width:24px;height:24px;border:1px solid var(--rule);background:transparent;color:var(--muted);cursor:pointer;font-size:0.72rem;display:flex;align-items:center;justify-content:center;flex-shrink:0"
+        onmouseover="this.style.borderColor='var(--alert)';this.style.color='var(--alert)'"
+        onmouseout="this.style.borderColor='var(--rule)';this.style.color='var(--muted)'">×</button>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function updateExtraItem(id, field, value) {
+  const item = extraItems.find(i => i.id === id);
+  if (item) { item[field] = value; render(); }
+}
+
+function render() {
+  const discOn = cb('discEnable');
+  document.getElementById('discFields').style.display = discOn ? 'flex' : 'none';
+  if (discOn) {
+    document.getElementById('rateFields').style.display = cb('useRate') ? '' : 'none';
+    document.getElementById('fixedFields').style.display = cb('useFixed') ? '' : 'none';
+  }
+  document.getElementById('depositFields').style.display = cb('payDeposit') ? 'flex' : 'none';
+  document.getElementById('payOtherFields').style.display = cb('payOther') ? 'flex' : 'none';
+
+  if (selectedPlan && selectedPlan.qty === null) {
+    const cq = v('customQty');
+    document.getElementById('displayQty').value = cq ? cq + ' 份' : '';
+  }
+
+  const N = getNumbers();
+  const displayQty = getDisplayQty();
+  const extraQty = Number(v('extraQty'))||0;
+
+  // sidebar price summary
+  let ps = `<div class="prow"><span>方案費用</span><b>NT$ ${fmt(N.planPrice)}</b></div>`;
+  if (N.extraPrice>0) ps+=`<div class="prow"><span>加購費用</span><b>NT$ ${fmt(N.extraPrice)}</b></div>`;
+  extraItems.forEach(item => {
+    if (item.name || item.price) ps+=`<div class="prow"><span>${esc(item.name)||'其他商品'}</span><b>NT$ ${fmt(item.price)}</b></div>`;
+  });
+  if (N.transport>0) ps+=`<div class="prow"><span>交通費</span><b>NT$ ${fmt(N.transport)}</b></div>`;
+  if (N.other>0) ps+=`<div class="prow"><span>其他費用</span><b>NT$ ${fmt(N.other)}</b></div>`;
+  if (N.discRateAmt>0) ps+=`<div class="prow"><span>${esc(v('discRateLabel')||'折數優惠')}</span><b style="color:var(--red)">－ NT$ ${fmt(N.discRateAmt)}</b></div>`;
+  if (N.discFixedAmt>0) ps+=`<div class="prow"><span>${esc(v('discFixedLabel')||'去尾數')}</span><b style="color:var(--red)">－ NT$ ${fmt(N.discFixedAmt)}</b></div>`;
+  ps+=`<div class="prow grand"><span>總計（含稅）</span><b>NT$ ${fmt(N.total)}</b></div>`;
+  document.getElementById('priceSummary').innerHTML = ps;
+
+  // Paper values
+  const orderNo = v('orderNo'), qDate = v('qDate'), project = v('projectName'), sales = v('salesName');
+  const clientCH = v('clientNameCH'), clientLINE = v('clientNameLINE'), phone = v('clientPhone');
+  const wDate = v('weddingDate'), wType = v('weddingType'), hours = v('hours'), guests = v('guestCount');
+  const venueCity = v('venueCity'), venue = v('venue'), hall = v('hallName');
+  const t1=v('t1'), t3=v('t3'), schedNote=v('schedNote');
+  const otherDesc = v('otherDesc'), extraNote = v('extraNote');
+  const scentStatus = v('scentStatus'), scentText = v('scentText');
+  const bottleShape = v('bottleShape'), capColor = v('capColor'), deadline = v('pendingDeadline');
+  const ckSticker = cb('ckSticker'), ckBackdrop = cb('ckBackdrop');
+  const payFull = cb('payFull'), payDeposit = cb('payDeposit'), payOther = cb('payOther');
+  const depositAmt = v('depositAmt'), balanceAmt = v('balanceAmt'), payOtherDesc = v('payOtherDesc');
+
+  const planName = selectedPlan ? selectedPlan.name : '（未選方案）';
+  const qtyText = displayQty ? displayQty + ' 份' : '___';
+
+  const scentHtml = scentStatus==='pending'
+    ? `<span style="color:var(--red);font-weight:600">★ 待確認</span>`
+    : (esc(scentText)||'<span style="color:var(--muted)">—</span>');
+
+  const hasPending = bottleShape==='pending' || capColor==='pending';
+  const bottleText = bottleShape==='pending' ? `<span style="color:var(--red);font-weight:500">待確認</span>` : esc(bottleShape);
+  const capText = capColor==='pending' ? `<span style="color:var(--red);font-weight:500">待確認</span>` : esc(capColor);
+  const deadlineText = deadline ? fmtDeadline(deadline) : '';
+
+  let discBadges = '';
+  if (N.discRateAmt>0) discBadges += `<span class="disc-badge">${esc(v('discRateLabel')||'折數優惠')}</span>`;
+  if (N.discFixedAmt>0) discBadges += `<span class="disc-badge">${esc(v('discFixedLabel')||'去尾數')}</span>`;
+
+  // Item rows
+  let idx=1, rows='';
+  rows += `<tr>
+    <td class="c">${idx++}</td>
+    <td><strong>${esc(planName)}</strong>，提供 ${qtyText}${discBadges}</td>
+    <td class="c">1</td><td class="c">式</td>
+    <td class="r">—</td>
+    <td class="ac">NT$ ${fmt(N.planPrice)}</td>
+  </tr>`;
+  if (extraQty>0||N.extraPrice>0) rows+=`<tr>
+    <td class="c">${idx++}</td><td>加購份數 ${extraQty?extraQty+'份':''}</td>
+    <td class="c">${extraQty||1}</td><td class="c">份</td>
+    <td class="r">—</td>
+    <td class="ac">NT$ ${fmt(N.extraPrice)}</td>
+  </tr>`;
+  extraItems.forEach(item => {
+    if (item.name || item.price) rows+=`<tr>
+      <td class="c">${idx++}</td><td>${esc(item.name)||'其他商品'}</td>
+      <td class="c">1</td><td class="c">式</td><td class="r">—</td>
+      <td class="ac">${item.price?'NT$ '+fmt(item.price):'—'}</td>
+    </tr>`;
+  });
+  rows+=`<tr>
+    <td class="c">${idx++}</td><td>交通費</td>
+    <td class="c">1</td><td class="c">式</td><td class="r">—</td>
+    <td class="ac">${N.transport>0?'NT$ '+fmt(N.transport):'0'}</td>
+  </tr>`;
+  if (N.other>0 || otherDesc) rows+=`<tr>
+    <td class="c">${idx++}</td><td>${esc(otherDesc)||'其他費用'}</td>
+    <td class="c">1</td><td class="c">式</td><td class="r">—</td>
+    <td class="ac">${N.other>0?'NT$ '+fmt(N.other):'—'}</td>
+  </tr>`;
+
+  let tRows=`<div class="trow"><span>金額</span><span>NT$ ${fmt(N.subtotal)}</span></div>`;
+  tRows+=`<div class="trow"><span>稅額</span><span>已含稅</span></div>`;
+  if (N.discRateAmt>0) tRows+=`<div class="trow"><span>${esc(v('discRateLabel')||'折數優惠')}</span><span style="color:var(--red)">－ NT$ ${fmt(N.discRateAmt)}</span></div>`;
+  if (N.discFixedAmt>0) tRows+=`<div class="trow"><span>${esc(v('discFixedLabel')||'去尾數')}</span><span style="color:var(--red)">－ NT$ ${fmt(N.discFixedAmt)}</span></div>`;
+  tRows+=`<div class="trow grand"><span>總計</span><span>NT$ ${fmt(N.total)}</span></div>`;
+
+  const sched=[
+    t1?`<strong>進場：</strong>${esc(t1)}`:'',
+    t3?`<strong>開放使用：</strong>${esc(t3)}`:'',
+    schedNote?`<span style="color:var(--muted)">${esc(schedNote)}</span>`:''
+  ].filter(Boolean).join('<br>');
+
+  const payFullBox=`<div class="pay-box${payFull?' active':''}">
+    <div class="pay-box-title"><span class="pay-check${payFull?' on':''}">${payFull?'✓':''}</span>全額付款</div>
+    <div class="pay-desc">一次付清全額，付款後即開始備貨與保留日期。</div>
+  </div>`;
+  const depositDesc = payDeposit && (depositAmt||balanceAmt)
+    ? `訂金 NT$ ${esc(depositAmt)||'___'}，活動前 15 天付清尾款 NT$ ${esc(balanceAmt)||'___'}。`
+    : `訂金 50%，活動前 15 天付清尾款 50%。`;
+  const payDepositBox=`<div class="pay-box${payDeposit?' active':''}">
+    <div class="pay-box-title"><span class="pay-check${payDeposit?' on':''}">${payDeposit?'✓':''}</span>付訂金 50%、15天前付尾款</div>
+    <div class="pay-desc">${depositDesc}</div>
+  </div>`;
+  const payOtherBox = payOther ? `<div class="pay-box active" style="grid-column:span 2">
+    <div class="pay-box-title"><span class="pay-check on">✓</span>其他付款方式</div>
+    <div class="pay-desc">${esc(payOtherDesc)||'（請見業務說明）'}</div>
+  </div>` : '';
+  const payGridCols = (payFull || payDeposit) && payOther ? 'grid-template-columns:1fr 1fr' : 'grid-template-columns:1fr 1fr';
+  const payGridHtml = `<div class="pay-grid" style="${payGridCols}">${payFullBox}${payDepositBox}${payOtherBox}</div>`;
+
+  document.getElementById('paper').innerHTML = `
+    <div class="paper-stripe"></div>
+    <div class="paper-inner">
+
+      <div class="paper-top">
+        <div class="paper-brand">
+          <img src="https://ik.imagekit.io/itssaturday/its-saturday-logo-300-100-1.png?updatedAt=1753622395304"
+               alt="It's Saturday! Logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <div style="display:none; font-size:0.88rem; font-weight:400; color:var(--copper); letter-spacing:0.12em;">IT'S SATURDAY!</div>
+          <div class="ch-name">星期六生活有限公司</div>
+        </div>
+        <div class="paper-order">
+          ${orderNo?`<div><strong>訂單編號</strong>&ensp;${esc(orderNo)}</div>`:''}
+          <div><strong>報價日期</strong>&ensp;${fmtD(qDate)}</div>
+          <div style="margin-top:4px;font-size:0.63rem;color:var(--red);font-weight:300">※ 請詳細閱讀，簽名後代表遵守此合約內容，不得有異議。</div>
+        </div>
+      </div>
+
+      <div class="paper-title-wrap">
+        <div class="ptitle-main">婚禮活動服務報價單</div>
+      </div>
+
+      <table class="info-table">
+        <tr>
+          <td class="lbl">專案名稱</td><td class="val">${esc(project)||'___'}</td>
+          <td class="lbl2">婚期</td>
+          <td class="val">${wDate?fmtD(wDate)+'（'+esc(wType)+'）'+(hours?' '+hours+' HRS':''):'___'}</td>
+        </tr>
+        <tr>
+          <td class="lbl">客戶姓名</td><td class="val">${esc(clientCH)||'___'}</td>
+          <td class="lbl2">地點</td><td class="val">${[venueCity, venue].filter(Boolean).join(' ')||'___'}</td>
+        </tr>
+        <tr>
+          <td class="lbl">LINE 名稱</td><td class="val">${esc(clientLINE)||'___'}</td>
+          <td class="lbl2">廳別 / 姓名</td><td class="val">${esc(hall)||'___'}</td>
+        </tr>
+        <tr>
+          <td class="lbl">聯絡電話</td><td class="val">${esc(phone)||'___'}</td>
+          <td class="lbl2">預計人數</td><td class="val">${guests?esc(guests)+' 人':'___'}</td>
+        </tr>
+        <tr>
+          <td class="lbl">負責業務</td><td class="val">${esc(sales)||'___'}</td>
+          <td class="lbl2">付款方式</td>
+          <td class="val">${[payFull?'全額付款':'', payDeposit?'訂金50%':'', payOther?'其他':''].filter(Boolean).join(' / ')||'___'}</td>
+        </tr>
+      </table>
+
+      ${sched?`<div class="pending-box"><div class="pending-title">★ 待確認時程</div><div class="pending-list">${sched}</div></div>`:''}
+
+      <!-- 報價品項 -->
+      <div class="paper-section">
+        <div class="paper-sec-title">報 價 品 項</div>
+        <table class="qt">
+          <thead><tr>
+            <th class="c" style="width:30px">項次</th>
+            <th>方案說明</th>
+            <th class="c" style="width:40px">數量</th>
+            <th class="c" style="width:34px">單位</th>
+            <th class="r" style="width:62px">單價</th>
+            <th class="r" style="width:100px">金額</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+        <div class="totals-wrap"><div class="totals-box">${tRows}</div></div>
+      </div>
+
+      <!-- 服務內容 -->
+      <div class="services-box">
+        <div class="svc-head">✦ 活動時長 ✦</div>
+        <div class="svc-body">
+          <p>全程活動時間為 <strong>${esc(hours)||'4'} 小時</strong>，建議時段為賓客入場～二進（可依新人需求做調整），若有提前用完之情形，將會撤離，若超過時間還有數量，將會現場裝瓶給予新人。</p>
+          <p class="svc-red">若超時 10 min 至 1 hr 內，將酌收超時費用 $3,000。</p>
+        </div>
+        <div class="services-cols">
+          <div class="services-col">
+            <div class="svc-head">✦ 活動含 ✦</div>
+            <div class="svc-body"><ul>
+              <li>3×3.5 cm 貼紙 + 米色桌巾</li>
+              <li>背板 150×90cm ×1</li>
+              <li>香氣 ×4（4管）</li>
+              <li>香水液體共買斷份容量</li>
+              <li>分液漏斗（玻璃 250ml）×4、試聞組 ×4</li>
+              <li>小漏斗（盛裝用）</li>
+              <li>漏斗鐵支架 ×4（如因裝置上需多加支架，加購 $120 / 支）</li>
+              <li>現場人力費用，會現場介紹、協助、推薦搭配</li>
+              <li>裝釘工程</li>
+            </ul></div>
+          </div>
+          <div class="services-col">
+            <div class="svc-head">✦ 注意事項 ✦</div>
+            <div class="svc-body"><ul>
+              <li class="svc-red">現場需備桌子（暫定高度 75cm）</li>
+              <li>佈置依現有佈置道具提供，若需另準備需另計費用</li>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 客製化項目 -->
+      <div class="paper-section page-break-before">
+        <div class="paper-sec-title">客 製 化 項 目</div>
+        <div class="custom-box">
+          <div class="custom-inner">
+            <div class="custom-row">
+              <span class="custom-k">✦ 香氣指定</span>
+              <span class="custom-v">${scentHtml}</span>
+            </div>
+            <div class="custom-row">
+              <span class="custom-k">香氛瓶身</span>
+              <span class="custom-v">${bottleText}</span>
+            </div>
+            <div class="custom-row">
+              <span class="custom-k">瓶蓋顏色</span>
+              <span class="custom-v">${capText}</span>
+            </div>
+            ${deadlineText?`<div class="custom-row">
+              <span class="custom-k" style="color:var(--red)">確認期限</span>
+              <span class="custom-v" style="color:var(--red);font-weight:400">請於 ${deadlineText} 前確認上述待確認項目</span>
+            </div>`:''}
+            <div class="custom-row">
+              <span class="custom-k">印刷項目</span>
+              <span class="custom-v">
+                ${ckSticker?'☑ 貼紙印刷':'☐ 貼紙印刷'}&emsp;${ckBackdrop?'☑ 背板印刷':'☐ 背板印刷'}<br>
+                <span style="font-size:0.67rem;color:var(--muted)">＊本服務不含設計，有公版設計可做排版，也可另提供設計檔案</span>
+              </span>
+            </div>
+            ${extraNote?`<div class="custom-row"><span class="custom-k">備註</span><span class="custom-v" style="color:var(--red)">${esc(extraNote)}</span></div>`:''}
+          </div>
+        </div>
+      </div>
+
+      <!-- 付款方式 -->
+      <div class="paper-section">
+        <div class="paper-sec-title">付 款 方 式</div>
+        ${payGridHtml}
+      </div>
+
+      <!-- 匯款資訊 + 有效期限 -->
+      <div class="remarks-grid">
+        <div class="remark-cell">
+          <span class="remark-label">匯款資訊</span>
+          <div class="bank-info">
+            <div class="bank-row"><span class="bank-k">戶名</span><span class="bank-v">星期六生活有限公司</span></div>
+            <div class="bank-row"><span class="bank-k">銀行</span><span class="bank-v">812 台新銀行 松德分行</span></div>
+            <div class="bank-row"><span class="bank-k">帳號</span><span class="bank-v">2097-01-0000791-7</span></div>
+          </div>
+        </div>
+        <div class="remark-cell">
+          <span class="remark-label">有效期限</span>
+          <div style="font-size:0.73rem;color:var(--text);line-height:1.9;font-weight:300">
+            此份報價有效期限至即日起 <strong style="color:var(--text)">2 週</strong>。<br>確認下單請簽章回傳。
+          </div>
+        </div>
+      </div>
+
+      <!-- 注意事項 -->
+      <div class="notes-box">
+        <div class="notes-text">
+          <span class="red">・付款後開始備貨與保留日期，不得取消，若取消不得退費定金（總金額百分之五十）。</span><br>
+          ・轉帳／刷卡手續費需由買方負擔。<br>
+          ・商品為客製商品，一經確認不得無故退貨，如需其他人力加工處理，例如額外包裝、跟車送，加工費用另計。<br>
+          ・此文件所含之一切資訊為機密資訊，智慧財產權星期六生活有限公司所有，請勿外流。<br>
+          ・確認下單，請將此報價單簽章回傳，以做正式訂單與合約之依據。<br>
+          <span class="orange">・如活動場地不提供廠商停車折抵，本公司將於活動結束後憑據向新人酌收停車費用。</span><br>
+          ・除上述之天然不可抗力之因素外，訂金不得轉其他消費或退還；本合約若有未盡之事宜，甲乙雙方依誠信原則處理。
+        </div>
+      </div>
+
+      <!-- 簽章 -->
+      <div class="sign-area">
+        <div class="sign-block">
+          <div class="sign-label-t">客戶確認簽名</div>
+          <div class="sign-line"></div>
+        </div>
+        <div class="sign-block">
+          <div class="sign-label-t">業務人員</div>
+          <div class="sign-line"></div>
+          <div class="sign-person">${esc(sales)||'___'}</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="paper-footer">IT'S SATURDAY! CLUB ✦ BREATH OF THE MOMENT ✦ 星期六生活有限公司 ✦ 統編 91109556</div>
+  `;
+}
+
+// ── Custom PDF filename ──
+function printPDF() {
+  const wDate = v('weddingDate');
+  const city = v('venueCity') || '台北';
+  const clientCH = v('clientNameCH');
+  const datePart = wDate ? wDate.replace(/-/g,'') : '';
+  const parts = [datePart, city, clientCH, '報價單'].filter(Boolean);
+  document.title = parts.join('-');
+  window.print();
+  // restore title after print dialog closes
+  setTimeout(() => { document.title = '婚禮香氛吧報價單 — 星期六生活有限公司'; }, 2000);
+}
+
+// ── Auto-fill schedule based on wedding type ──
+function autoFillSchedule() {
+  const type = v('weddingType');
+  const t1el = document.getElementById('t1');
+  const t3el = document.getElementById('t3');
+  // Only auto-fill if fields are empty or contain previous preset values
+  const presets = {
+    '午宴': { t1: '10:00-10:30', t3: '11:30 賓客入場可開始使用' },
+    '晚宴': { t1: '16:30-17:00', t3: '18:00 賓客入場可開始使用' }
+  };
+  if (presets[type]) {
+    t1el.value = presets[type].t1;
+    t3el.value = presets[type].t3;
+  }
+}
+
+function resetAll() {
+  if (!confirm('確定要重置所有資料嗎？')) return;
+  ['orderNo','clientNameCH','clientNameLINE','clientPhone','weddingDate','guestCount',
+   'venue','venueCity','hallName','t1','t3','schedNote','planPrice','extraQty','extraPrice','transport',
+   'otherDesc','otherAmt','discRate','discRateLabel','discFixed','discFixedLabel',
+   'scentText','pendingDeadline','extraNote','salesName','depositAmt','balanceAmt','customQty'].forEach(id=>{
+    const e=document.getElementById(id); if(e) e.value='';
+  });
+  document.getElementById('transport').value=0;
+  document.getElementById('otherAmt').value=0;
+  document.getElementById('projectName').value='婚禮調香活動';
+  document.getElementById('hours').value=4;
+  document.getElementById('weddingType').value='晚宴';
+  document.getElementById('venueCity').value='台北';
+  document.getElementById('scentStatus').value='pending';
+  document.getElementById('bottleShape').value='pending';
+  document.getElementById('capColor').value='pending';
+  document.getElementById('displayQty').value='';
+  ['discEnable','useRate','useFixed','ckSticker','ckBackdrop','payFull','payDeposit','payOther'].forEach(id=>{
+    const e=document.getElementById(id); if(e) e.checked=false;
+  });
+  const payOtherDescEl = document.getElementById('payOtherDesc');
+  if (payOtherDescEl) payOtherDescEl.value = '';
+  extraItems = []; extraItemId = 0;
+  renderExtraItemRows();
+  document.querySelectorAll('.plan-card').forEach(c=>c.classList.remove('selected'));
+  selectedPlan=null;
+  document.getElementById('customQtyField').style.display='none';
+  toggleScent();
+  render();
+}
+
+(function init() {
+  const now=new Date(), p=n=>String(n).padStart(2,'0');
+  const today=`${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())}`;
+  document.getElementById('qDate').value=today;
+  const lucky=['668','666','888'][Math.floor(Math.random()*3)];
+  document.getElementById('orderNo').value=`${now.getFullYear()}${p(now.getMonth()+1)}${p(now.getDate())}${lucky}`;
+  autoFillSchedule();
+  toggleScent();
+  render();
+})();
+
+  // ── 刪除報價單 ──────────────────────────────────────────────────────────────
+  window.deleteQuote = async function(docId, btn) {
+    if (!confirm("確定要刪除這筆報價單嗎？此動作無法復原。")) return;
+    btn.textContent = "刪除中…";
+    btn.disabled = true;
+    try {
+      await db.collection("quotes").doc(docId).delete();
+      const card = document.querySelector("[data-docid='" + docId + "']");
+      if (card) {
+        card.style.opacity = "0";
+        card.style.transform = "translateX(20px)";
+        card.style.transition = "all 0.3s ease";
+        setTimeout(function() { card.remove(); }, 300);
+      }
+      const list = document.getElementById("historyList");
+      if (list && !list.querySelector(".hist-card")) {
+        list.innerHTML = "<div style='color:#9a8878;padding:20px;text-align:center'>尚無歷史報價單</div>";
+      }
+    } catch (e) {
+      console.error(e);
+      alert("刪除失敗，請稍後再試。");
+      btn.textContent = "刪除";
+      btn.disabled = false;
+    }
+  };
+
+// ── 收集表單資料 ──────────────────────────────────────────────────────────────
+function collectFormData() {
+  const N = getNumbers();
+  return {
+    orderNo:        v('orderNo'),
+    qDate:          v('qDate'),
+    projectName:    v('projectName'),
+    salesName:      v('salesName'),
+    clientNameCH:   v('clientNameCH'),
+    clientNameLINE: v('clientNameLINE'),
+    clientPhone:    v('clientPhone'),
+    weddingDate:    v('weddingDate'),
+    weddingType:    v('weddingType'),
+    guestCount:     v('guestCount'),
+    hours:          v('hours'),
+    venue:          v('venue'),
+    venueCity:      v('venueCity'),
+    hallName:       v('hallName'),
+    plan:           selectedPlan ? selectedPlan.name : '',
+    planQty:        getDisplayQty(),
+    planPrice:      Number(v('planPrice'))||0,
+    extraQty:       Number(v('extraQty'))||0,
+    extraPrice:     Number(v('extraPrice'))||0,
+    transport:      Number(v('transport'))||0,
+    otherDesc:      v('otherDesc'),
+    otherAmt:       Number(v('otherAmt'))||0,
+    discountPct:    cb('discEnable') && cb('useRate') ? Number(v('discRate'))||0 : 0,
+    discountFixed:  cb('discEnable') && cb('useFixed') ? Number(v('discFixed'))||0 : 0,
+    scentStatus:    v('scentStatus'),
+    scentText:      v('scentText'),
+    bottleShape:    v('bottleShape'),
+    capColor:       v('capColor'),
+    ckSticker:      cb('ckSticker'),
+    ckBackdrop:     cb('ckBackdrop'),
+    payFull:        cb('payFull'),
+    payDeposit:     cb('payDeposit'),
+    depositAmt:     v('depositAmt'),
+    balanceAmt:     v('balanceAmt'),
+    extraNote:      v('extraNote'),
+    subtotal:       N.subtotal,
+    total:          N.total,
+  };
+}
+
+// ── 載入歷史報價單回表單 ──────────────────────────────────────────────────────
+function loadQuote(btn) {
+  if (!confirm('載入此報價單將覆蓋目前填寫的內容，確定嗎？')) return;
+  const d = JSON.parse(btn.getAttribute('data-json'));
+  document.getElementById('historyModal').style.display = 'none';
+
+  const setV = (id, val) => { const e=document.getElementById(id); if(e && val!==undefined) e.value=val; };
+  const setCb = (id, val) => { const e=document.getElementById(id); if(e) e.checked=!!val; };
+
+  setV('orderNo', d.orderNo); setV('qDate', d.qDate);
+  setV('projectName', d.projectName); setV('salesName', d.salesName);
+  setV('clientNameCH', d.clientNameCH); setV('clientNameLINE', d.clientNameLINE);
+  setV('clientPhone', d.clientPhone);
+  setV('weddingDate', d.weddingDate); setV('weddingType', d.weddingType);
+  setV('guestCount', d.guestCount); setV('hours', d.hours);
+  setV('venue', d.venue); setV('venueCity', d.venueCity); setV('hallName', d.hallName);
+  setV('planPrice', d.planPrice); setV('extraQty', d.extraQty);
+  setV('extraPrice', d.extraPrice); setV('transport', d.transport);
+  setV('otherDesc', d.otherDesc); setV('otherAmt', d.otherAmt);
+  setV('discRate', d.discountPct); setV('discFixed', d.discountFixed);
+  setV('scentStatus', d.scentStatus); setV('scentText', d.scentText);
+  setV('bottleShape', d.bottleShape); setV('capColor', d.capColor);
+  setV('depositAmt', d.depositAmt); setV('balanceAmt', d.balanceAmt);
+  setV('extraNote', d.extraNote);
+
+  setCb('discEnable', d.discountPct > 0 || d.discountFixed > 0);
+  setCb('useRate', d.discountPct > 0);
+  setCb('useFixed', d.discountFixed > 0);
+  setCb('ckSticker', d.ckSticker);
+  setCb('ckBackdrop', d.ckBackdrop);
+  setCb('payFull', d.payFull);
+  setCb('payDeposit', d.payDeposit);
+
+  // Restore plan selection
+  if (d.plan) {
+    document.querySelectorAll('.plan-card').forEach(card => {
+      if (card.querySelector('.pname')?.textContent === d.plan) {
+        card.classList.add('selected');
+        selectedPlan = { name: d.plan, qty: d.planQty };
+        const displayQty = document.getElementById('displayQty');
+        if (displayQty) displayQty.value = d.planQty ? d.planQty + ' 份' : '';
+      }
+    });
+  }
+
+  toggleScent();
+  render();
+}
+
+</script>
+
+<!-- 歷史紀錄 Modal -->
+<div id="historyModal">
+  <div class="hist-inner">
+    <div class="hist-header">
+      <span>📋 歷史報價單</span>
+      <button class="hist-close" onclick="document.getElementById('historyModal').style.display='none'">✕</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+</div>
+</div><!-- /appBody -->
+</body>
+</html>
