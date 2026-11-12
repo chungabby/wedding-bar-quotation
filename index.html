@@ -470,7 +470,7 @@ html, body { height: 100%; font-family: var(--font); color: var(--text); backgro
 
       <div class="sec">
         <div class="sec-h">其他備註（呈現在報價單獨立欄位）</div>
-        <div class="sec-b"><div class="field"><textarea id="extraNote" rows="2" oninput="render()"></textarea></div></div>
+        <div class="sec-b"><div class="field"><textarea id="extraNote" rows="4" style="resize:vertical;" placeholder="可按 Enter 換行" oninput="render()"></textarea></div></div>
       </div>
 
     </div>
@@ -493,6 +493,7 @@ html, body { height: 100%; font-family: var(--font); color: var(--text); backgro
 const v = id => { const e=document.getElementById(id); return e?e.value.trim():''; };
 const cb = id => { const e=document.getElementById(id); return e?e.checked:false; };
 const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const escBr = s => esc(s).replace(/\r?\n/g,'<br>');
 const fmt = n => Number(n||0).toLocaleString('zh-TW');
 const DAYS = ['日','一','二','三','四','五','六'];
 const fmtD = d => { if (!d) return ' ___'; const [y,m,day] = d.split('-'); return `${y}/${m}/${day}（${DAYS[new Date(+y, +m-1, +day).getDay()]}）`; };
@@ -726,7 +727,7 @@ function render() {
     </div>`;
 
   /* ── f. 客製化項目 ── */
-  const scentDisplay = scentStatus === 'pending' ? '★ 待確認' : (esc(scentText) || '★ 待確認');
+  const scentDisplay = scentStatus === 'pending' ? '★ 待確認' : (escBr(scentText) || '★ 待確認');
   const customBox = `
     <div class="custom-box">
       <div class="paper-sec-title" style="border-bottom:1px solid var(--rule); padding-top:10px;">客 製 化 項 目</div>
@@ -752,7 +753,7 @@ function render() {
   let payMethodText = '★ 尚未選擇付款方式';
   if (payFull) payMethodText = '全額付款';
   else if (payDeposit) payMethodText = '訂金 50% ＋ 尾款';
-  else if (payOther) payMethodText = esc(payOtherDesc) || '其他付款方式（詳見備註）';
+  else if (payOther) payMethodText = escBr(payOtherDesc) || '其他付款方式（詳見備註）';
 
   const payGrid = `
     <div class="pay-grid">
@@ -784,7 +785,7 @@ function render() {
   /* ── h2. 其他備註（獨立區塊，僅於有填寫時顯示） ── */
   const otherRemarkBox = extraNote ? `
     <div class="paper-sec-title">其 他 備 註</div>
-    <div class="notes-box">${esc(extraNote)}</div>` : '';
+    <div class="notes-box" style="line-height:1.9;">${escBr(extraNote)}</div>` : '';
 
   /* ── i. 雙方簽章欄位 ── */
   const signArea = `
@@ -851,7 +852,11 @@ function autoFillSchedule() {
 /* ── 列印：以「編號_客戶」作為 PDF 預設檔名 ── */
 function printPDF() {
   const original = document.title;
-  const name = [v('orderNo'), v('clientNameCH'), '報價單'].filter(Boolean).join('_');
+  /* 格式：活動日期_客戶姓名_地區場地份數_報價單，例：20260522_盧姿羽_台北萬豪80份_報價單 */
+  const qty = getDisplayQty();
+  const place = (v('venueCity') + v('venue')).replace(/\s+/g,'') + (qty ? qty + '份' : '');
+  const name = [v('weddingDate').replace(/-/g,''), v('clientNameCH'), place, '報價單']
+    .filter(Boolean).join('_').replace(/[\\/:*?"<>|]/g,'');
   document.title = name;
   window.print();
   setTimeout(() => { document.title = original; }, 500);
